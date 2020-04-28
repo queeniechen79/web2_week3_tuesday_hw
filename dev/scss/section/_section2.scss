@@ -1,0 +1,22 @@
+/* =============
+    section2
+============= */
+#section2 {
+    display: grid;
+    grid-template-columns: 10px auto 10px;
+    grid-template-areas: ". section2 .";
+
+    >div {
+        grid-area: section2;
+    }
+    h1 {
+        text-align: center;
+    }
+    h2 {
+        text-align: center;
+    }
+    hr {
+        border-top: 2px solid $orange;
+        margin: 10px;
+    }
+}

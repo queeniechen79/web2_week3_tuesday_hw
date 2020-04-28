@@ -1,0 +1,16 @@
+/* =============
+    Section3
+============= */
+#section3 {
+    display: grid;
+    grid-template-columns: 10px auto 10px;
+    grid-template-areas: ". section3 .";
+
+    >div {
+        grid-area: section3;
+    }
+    h2 {
+        color: $orange;
+        text-align: center;
+    }
+}

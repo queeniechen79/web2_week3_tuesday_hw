@@ -1,0 +1,14 @@
+/* =============
+    section1
+============= */
+#section1 {
+    display: grid;
+    grid-template-columns: 10px auto 10px;
+    grid-template-areas: ". section1 .";
+
+    >div {
+        grid-area: section1;
+    }
+    background-color: $white;
+    color: $orange;
+}
