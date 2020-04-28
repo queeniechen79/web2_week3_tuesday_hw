@@ -389,8 +389,7 @@ textarea {
 
 #section2 #dividertop {
   grid-area: dividertop;
-  border-color: #E7B83A;
-  height: 5px; }
+  border-color: 2px solid #E7B83A; }
 
 #section2 #section2-content {
   grid-area: content;
@@ -398,8 +397,7 @@ textarea {
 
 #section2 #dividerbot {
   grid-area: dividerbot;
-  border-color: #E7B83A;
-  height: 5px; }
+  border-color: 2px solid #E7B83A; }
 
 /* =============
     Section3
@@ -414,8 +412,7 @@ textarea {
 
 #section3 #dividertop {
   grid-area: dividertop;
-  border-color: #000;
-  height: 5px; }
+  border-color: 2px solid #000; }
 
 #section3 #section3-content {
   grid-area: content;
@@ -424,8 +421,7 @@ textarea {
 
 #section3 #dividerbot {
   grid-area: dividerbot;
-  border-color: #000;
-  height: 5px; }
+  border-color: 2px solid #000; }
 
 /* =============
     Section4

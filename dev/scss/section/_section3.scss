@@ -14,8 +14,7 @@
     
     #dividertop {
         grid-area: dividertop;
-        border-color: $black;
-        height: 5px;
+        border-color: 2px solid $black;
     }
     
     #section3-content {
@@ -26,7 +25,6 @@
 
     #dividerbot {
         grid-area: dividerbot;
-        border-color: $black;
-        height: 5px
+        border-color: 2px solid $black;
     }
 }
