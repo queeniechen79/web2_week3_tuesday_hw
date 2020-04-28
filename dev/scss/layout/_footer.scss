@@ -1,15 +1,19 @@
 /* =============
     Footer
 ============= */
-footer{
+#footer {
     display: grid;
     grid-template-columns: 10px auto 10px;
     grid-template-areas: ". footer .";
 
-    >div {
-        grid-area: footer;
-    }
     background-color: $orange;
-    color: $white; 
-    text-align: right;
+
+    #footer-container {
+        grid-area: footer;
+
+        h6 {
+            color: $white;
+            text-align: right;
+        }
+    }
 }

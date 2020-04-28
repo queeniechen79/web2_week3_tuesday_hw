@@ -2,21 +2,30 @@
     section2
 ============= */
 #section2 {
-    display: grid;
-    grid-template-columns: 10px auto 10px;
-    grid-template-areas: ". section2 .";
+    img {
+        width: 100%;
+    }
+    
+    #section2-container {
+        display: grid;
+        grid-template-columns: 10px auto 10px;
+        grid-template-areas: ". dividertop ." ". dividerbot ." ". content .";
+    }
 
-    >div {
-        grid-area: section2;
+    #dividertop {
+        grid-area: dividertop;
+        border-color: $yellow;
+        height: 5px;
     }
-    h1 {
+
+    #section2-content {
+        grid-area: content;
         text-align: center;
     }
-    h2 {
-        text-align: center;
-    }
-    hr {
-        border-top: 2px solid $orange;
-        margin: 10px;
+
+    #dividerbot {
+        grid-area: dividerbot;
+        border-color: $yellow;
+        height: 5px
     }
 }

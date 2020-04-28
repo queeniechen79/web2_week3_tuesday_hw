@@ -2,13 +2,18 @@
     Section4
 ============= */
 #section4 {
+    img {
+        width: 100%;
+    }
+    
     display: grid;
     grid-template-columns: 10px auto 10px;
     grid-template-areas: ". section4 .";
 
-    >div {
+    #gallery {
         grid-area: section4;
     }
+    
     ul {
         padding: 0px;
         li {
@@ -16,3 +21,4 @@
         }
     }
 }
+

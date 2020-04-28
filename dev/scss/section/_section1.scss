@@ -2,13 +2,20 @@
     section1
 ============= */
 #section1 {
+    img {
+        width: 1000%;
+    }
+    
     display: grid;
     grid-template-columns: 10px auto 10px;
     grid-template-areas: ". section1 .";
 
-    >div {
+    #title-container{
         grid-area: section1;
+        text-align: center;
     }
-    background-color: $white;
-    color: $orange;
+
+    #title {
+        color:$orange;
+    }
 }

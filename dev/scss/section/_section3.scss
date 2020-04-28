@@ -2,15 +2,31 @@
     Section3
 ============= */
 #section3 {
-    display: grid;
-    grid-template-columns: 10px auto 10px;
-    grid-template-areas: ". section3 .";
-
-    >div {
-        grid-area: section3;
+    img {
+        width: 100%;
     }
-    h2 {
+    
+    #section3-container {
+        display: grid;
+        grid-template-columns: 10px auto 10px;
+        grid-template-areas: ". dividertop ." ". dividerbot ." ". content .";
+    }
+    
+    #dividertop {
+        grid-area: dividertop;
+        border-color: $black;
+        height: 5px;
+    }
+    
+    #section3-content {
+        grid-area: content;
         color: $orange;
         text-align: center;
+    }
+
+    #dividerbot {
+        grid-area: dividerbot;
+        border-color: $black;
+        height: 5px
     }
 }
