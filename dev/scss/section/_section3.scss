@@ -4,6 +4,10 @@
 #section3 {
     img {
         width: 100%;
+
+        @include lg {
+            max-width: 1025px;
+        }
     }
     
     #section3-container {
@@ -14,7 +18,9 @@
     
     #dividertop {
         grid-area: dividertop;
-        border-color: 2px solid $black;
+        hr {
+            border-color: 2px solid $black;
+        }
     }
     
     #section3-content {
@@ -25,6 +31,8 @@
 
     #dividerbot {
         grid-area: dividerbot;
-        border-color: 2px solid $black;
+        hr {
+            border-color: 2px solid $black;
+        }
     }
 }

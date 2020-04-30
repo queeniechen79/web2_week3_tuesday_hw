@@ -323,6 +323,18 @@ ul {
 ul li {
   list-style: none; }
 
+.container-grid {
+  display: grid;
+  grid-template-columns: auto 1200px auto;
+  grid-template-areas: ". grid-content .";
+  min-height: 100vh; }
+  .container-grid .grid-content {
+    grid-area: grid-content;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+
 /* =============
     Typography
 ============= */
@@ -368,17 +380,34 @@ textarea {
   display: grid;
   grid-template-columns: 10px auto 10px;
   grid-template-areas: ". section1 ."; }
+  @media (min-width: 1200px) {
+    #section1 {
+      grid-template-columns: auto 1200px auto; } }
   #section1 img {
-    width: 1000%; }
-  #section1 #title-container {
+    width: 50%; }
+  #section1 h1 {
+    color: #D87337;
     grid-area: section1;
     text-align: center; }
-  #section1 #title {
-    color: #D87337; }
 
 /* =============
     section2
 ============= */
+@media (min-width: 1200px) {
+  #section2 {
+    display: grid;
+    grid-template-columns: auto 1200px auto;
+    grid-template-areas: " .section2 ."; } }
+
+@media (min-width: 992px) {
+  #section2 {
+    display: grid;
+    grid-template-columns: 40% auto; } }
+
+@media (min-width: 1200px) {
+  #section2 {
+    grid-area: section2; } }
+
 #section2 img {
   width: 100%; }
 
@@ -386,33 +415,40 @@ textarea {
   display: grid;
   grid-template-columns: 10px auto 10px;
   grid-template-areas: ". dividertop ." ". dividerbot ." ". content ."; }
-
+  @media (min-width: 768px) {
+    #section2 #section2-container {
+      grid-template-columns: 10% auto 10%; } }
 #section2 #dividertop {
-  grid-area: dividertop;
-  border-color: 2px solid #E7B83A; }
+  grid-area: dividertop; }
+  #section2 #dividertop hr {
+    border-color: 2px solid #E7B83A; }
 
 #section2 #section2-content {
   grid-area: content;
   text-align: center; }
 
 #section2 #dividerbot {
-  grid-area: dividerbot;
-  border-color: 2px solid #E7B83A; }
+  grid-area: dividerbot; }
+  #section2 #dividerbot hr {
+    border-color: 2px solid #E7B83A; }
 
 /* =============
     Section3
 ============= */
 #section3 img {
   width: 100%; }
-
+  @media (min-width: 992px) {
+    #section3 img {
+      max-width: 1025px; } }
 #section3 #section3-container {
   display: grid;
   grid-template-columns: 10px auto 10px;
   grid-template-areas: ". dividertop ." ". dividerbot ." ". content ."; }
 
 #section3 #dividertop {
-  grid-area: dividertop;
-  border-color: 2px solid #000; }
+  grid-area: dividertop; }
+  #section3 #dividertop hr {
+    border-color: 2px solid #000; }
 
 #section3 #section3-content {
   grid-area: content;
@@ -420,8 +456,9 @@ textarea {
   text-align: center; }
 
 #section3 #dividerbot {
-  grid-area: dividerbot;
-  border-color: 2px solid #000; }
+  grid-area: dividerbot; }
+  #section3 #dividerbot hr {
+    border-color: 2px solid #000; }
 
 /* =============
     Section4
@@ -433,12 +470,23 @@ textarea {
   #section4 img {
     width: 100%; }
   #section4 #gallery {
-    grid-area: section4; }
-  #section4 ul {
-    padding: 0px; }
-    #section4 ul li {
-      list-style: none; }
-
+    grid-area: section4;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px; }
+    @media (min-width: 768px) {
+      #section4 #gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: " .oranges ." ". lemons ." ". limes ."; } }
+    @media (min-width: 768px) {
+      #section4 #gallery #oranges {
+        grid-template-areas: oranges; } }
+    @media (min-width: 768px) {
+      #section4 #gallery #lemons {
+        grid-template-areas: lemons; } }
+    @media (min-width: 768px) {
+      #section4 #gallery #lime {
+        grid-template-areas: limes; } }
 /* =============
     section5
 ============= */
@@ -448,5 +496,18 @@ textarea {
   grid-template-areas: ". content ."; }
   #section5 img {
     width: 100%; }
+  @media (min-width: 1200px) {
+    #section5 {
+      display: grid;
+      grid-template-columns: auto 1200px auto;
+      grid-template-areas: " .section5 ."; } }
+  @media (min-width: 992px) {
+    #section5 {
+      display: grid;
+      grid-template-columns: 40% auto; } }
+  @media (min-width: 1200px) {
+    #section5 {
+      grid-area: section5; } }
   #section5 #section5-content {
-    grid-area: content; }
+    grid-area: content;
+    text-align: center; }

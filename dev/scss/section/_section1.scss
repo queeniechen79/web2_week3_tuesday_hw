@@ -2,20 +2,21 @@
     section1
 ============= */
 #section1 {
+    @include xl {
+        grid-template-columns: auto 1200px auto;
+    }
+    
     img {
-        width: 1000%;
+        width: 50%;
     }
     
     display: grid;
     grid-template-columns: 10px auto 10px;
     grid-template-areas: ". section1 .";
 
-    #title-container{
+    h1 {
+        color: $orange;
         grid-area: section1;
         text-align: center;
-    }
-
-    #title {
-        color:$orange;
     }
 }

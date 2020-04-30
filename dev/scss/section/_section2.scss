@@ -2,6 +2,21 @@
     section2
 ============= */
 #section2 {
+    @include xl {
+        display: grid;
+        grid-template-columns: auto 1200px auto;
+        grid-template-areas: " .section2 .";
+    }
+    
+    @include lg {
+        display: grid;
+        grid-template-columns: 40% auto;
+    }
+
+    @include xl {
+        grid-area: section2;
+    }
+
     img {
         width: 100%;
     }
@@ -10,11 +25,17 @@
         display: grid;
         grid-template-columns: 10px auto 10px;
         grid-template-areas: ". dividertop ." ". dividerbot ." ". content .";
+
+        @include md {
+            grid-template-columns: 10% auto 10%;
+        }
     }
 
     #dividertop {
         grid-area: dividertop;
-        border-color: 2px solid $yellow;
+        hr {
+            border-color: 2px solid $yellow;
+        }
     }
 
     #section2-content {
@@ -24,6 +45,8 @@
 
     #dividerbot {
         grid-area: dividerbot;
-        border-color: 2px solid $yellow;
+        hr {
+            border-color: 2px solid $yellow;
+        }
     }
 }

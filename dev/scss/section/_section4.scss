@@ -12,13 +12,33 @@
 
     #gallery {
         grid-area: section4;
-    }
-    
-    ul {
-        padding: 0px;
-        li {
-            list-style: none;
+        grid-row-gap: 10px;
+        grid-column-gap: 10px;
+
+        @include md {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: " .oranges ." ". lemons ." ". limes .";
+        }
+
+        #oranges {
+            @include md {
+                grid-template-areas: oranges;
+            }
+        }
+
+        #lemons {
+            @include md {
+                grid-template-areas: lemons;
+            }
+        }
+
+        #lime {
+            @include md {
+                grid-template-areas: limes;
+            }
         }
     }
+    
 }
 
