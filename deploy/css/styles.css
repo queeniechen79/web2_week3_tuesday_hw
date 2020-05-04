@@ -376,19 +376,13 @@ textarea {
 /* =============
     section1
 ============= */
-#section1 {
-  display: grid;
-  grid-template-columns: 10px auto 10px;
-  grid-template-areas: ". section1 ."; }
-  @media (min-width: 1200px) {
-    #section1 {
-      grid-template-columns: auto 1200px auto; } }
-  #section1 img {
-    width: 50%; }
-  #section1 h1 {
-    color: #D87337;
-    grid-area: section1;
-    text-align: center; }
+#section1 img {
+  width: 100%; }
+
+#section1 h1 {
+  color: #D87337;
+  grid-area: section1;
+  text-align: center; }
 
 /* =============
     section2
@@ -414,39 +408,35 @@ textarea {
 #section2 #section2-container {
   display: grid;
   grid-template-columns: 10px auto 10px;
-  grid-template-areas: ". dividertop ." ". dividerbot ." ". content ."; }
+  grid-template-areas: ". content ."; }
   @media (min-width: 768px) {
     #section2 #section2-container {
       grid-template-columns: 10% auto 10%; } }
-#section2 #dividertop {
-  grid-area: dividertop; }
-  #section2 #dividertop hr {
-    border-color: 2px solid #E7B83A; }
-
-#section2 #section2-content {
-  grid-area: content;
-  text-align: center; }
-
-#section2 #dividerbot {
-  grid-area: dividerbot; }
-  #section2 #dividerbot hr {
-    border-color: 2px solid #E7B83A; }
+  #section2 #section2-container #dividertop {
+    grid-area: content; }
+    #section2 #section2-container #dividertop hr {
+      border: 2px solid #E7B83A; }
+  #section2 #section2-container #section2-content {
+    grid-area: content;
+    text-align: center; }
+  #section2 #section2-container #dividerbot {
+    grid-area: content; }
+    #section2 #section2-container #dividerbot hr {
+      border: 2px solid #E7B83A; }
 
 /* =============
     Section3
 ============= */
 #section3 img {
   width: 100%; }
-  @media (min-width: 992px) {
-    #section3 img {
-      max-width: 1025px; } }
+
 #section3 #section3-container {
   display: grid;
   grid-template-columns: 10px auto 10px;
-  grid-template-areas: ". dividertop ." ". dividerbot ." ". content ."; }
+  grid-template-areas: ". content ."; }
 
 #section3 #dividertop {
-  grid-area: dividertop; }
+  grid-area: content; }
   #section3 #dividertop hr {
     border-color: 2px solid #000; }
 
@@ -456,9 +446,9 @@ textarea {
   text-align: center; }
 
 #section3 #dividerbot {
-  grid-area: dividerbot; }
+  grid-area: content; }
   #section3 #dividerbot hr {
-    border-color: 2px solid #000; }
+    border: 2px solid #000; }
 
 /* =============
     Section4
@@ -490,24 +480,21 @@ textarea {
 /* =============
     section5
 ============= */
-#section5 {
-  display: grid;
-  grid-template-columns: 10px auto 10px;
-  grid-template-areas: ". content ."; }
-  #section5 img {
-    width: 100%; }
-  @media (min-width: 1200px) {
-    #section5 {
-      display: grid;
-      grid-template-columns: auto 1200px auto;
-      grid-template-areas: " .section5 ."; } }
-  @media (min-width: 992px) {
-    #section5 {
-      display: grid;
-      grid-template-columns: 40% auto; } }
-  @media (min-width: 1200px) {
-    #section5 {
-      grid-area: section5; } }
-  #section5 #section5-content {
-    grid-area: content;
-    text-align: center; }
+#section5 img {
+  width: 100%; }
+
+@media (min-width: 576px) {
+  #section5 {
+    display: grid;
+    grid-template-columns: auto 40%; } }
+
+@media (min-width: 992px) {
+  #section5 {
+    display: grid;
+    grid-template-columns: auto 40%; } }
+
+@media (min-width: 1200px) {
+  #section5 {
+    display: grid;
+    grid-template-columns: auto 40%;
+    padding-right: 40%; } }

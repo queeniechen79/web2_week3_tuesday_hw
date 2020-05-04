@@ -24,29 +24,30 @@
     #section2-container {
         display: grid;
         grid-template-columns: 10px auto 10px;
-        grid-template-areas: ". dividertop ." ". dividerbot ." ". content .";
+        grid-template-areas: ". content .";
 
         @include md {
             grid-template-columns: 10% auto 10%;
         }
-    }
 
-    #dividertop {
-        grid-area: dividertop;
-        hr {
-            border-color: 2px solid $yellow;
+        #dividertop {
+            grid-area: content;
+            hr {
+                border: 2px solid $yellow;
+            }
+        }
+    
+        #section2-content {
+            grid-area: content;
+            text-align: center;
+        }
+    
+        #dividerbot {
+            grid-area: content;
+            hr {
+                border: 2px solid $yellow;
+            }
         }
     }
 
-    #section2-content {
-        grid-area: content;
-        text-align: center;
-    }
-
-    #dividerbot {
-        grid-area: dividerbot;
-        hr {
-            border-color: 2px solid $yellow;
-        }
-    }
 }

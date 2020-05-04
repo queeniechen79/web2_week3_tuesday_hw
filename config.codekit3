@@ -29,83 +29,6 @@
 		"oF": 0,
 		"oS": 3
 		},
-	"/deploy/img/allcitrus.jpg": {
-		"ft": 16384,
-		"iS": 364488,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/deploy/img/allcitrus.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"/deploy/img/lemonade.jpg": {
-		"ft": 16384,
-		"iS": 121671,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/deploy/img/lemonade.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"/deploy/img/lemons.jpg": {
-		"ft": 16384,
-		"iS": 213705,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/deploy/img/lemons.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"/deploy/img/lime.jpg": {
-		"ft": 16384,
-		"iS": 141244,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/deploy/img/lime.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"/deploy/img/orangefruits.jpg": {
-		"ft": 16384,
-		"iS": 227585,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/deploy/img/orangefruits.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"/deploy/img/oranges.jpg": {
-		"ft": 16384,
-		"iS": 186082,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/deploy/img/oranges.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"/deploy/img/smallgroupofcitrus.jpg": {
-		"ft": 16384,
-		"iS": 273300,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/deploy/img/smallgroupofcitrus.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
 	"/deploy/index.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -138,8 +61,8 @@
 		"ft": 2048,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/dev/index.html",
-		"oF": 0
+		"oAP": "/deploy/index.html",
+		"oF": 2
 		},
 	"/dev/js/scripts.js": {
 		"bF": 0,
@@ -342,8 +265,8 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/dev/scss/styles.css",
-		"oF": 0,
+		"oAP": "/deploy/css/styles.css",
+		"oF": 3,
 		"oS": 0,
 		"uL": 1
 		},

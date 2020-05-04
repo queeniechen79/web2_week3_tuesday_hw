@@ -5,27 +5,29 @@
     img {
         width: 100%;
     }
-    @include xl {
-        display: grid;
-        grid-template-columns: auto 1200px auto;
-        grid-template-areas: " .section5 .";
-    }
     
+    @include sm {
+        display: grid;
+        grid-template-columns: auto 40%;
+    }
+
     @include lg {
         display: grid;
-        grid-template-columns: 40% auto;
+        grid-template-columns: auto 40%;
     }
 
     @include xl {
-        grid-area: section5;
+        display: grid;
+        grid-template-columns: auto 40%;
+        padding-right: 40%;
     }
 
-    display: grid;
-    grid-template-columns: 10px auto 10px;
-    grid-template-areas: ". content .";
+    // display: grid;
+    // grid-template-columns: 10px auto 10px;
+    // grid-template-areas: ". content .";
 
-    #section5-content {
-        grid-area: content;
-        text-align: center;
-    }
+        // p {
+        //     grid-area: content;
+        //     text-align: center;
+        // }
 }

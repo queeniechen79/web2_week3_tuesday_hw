@@ -4,20 +4,16 @@
 #section3 {
     img {
         width: 100%;
-
-        @include lg {
-            max-width: 1025px;
-        }
     }
-    
+
     #section3-container {
         display: grid;
         grid-template-columns: 10px auto 10px;
-        grid-template-areas: ". dividertop ." ". dividerbot ." ". content .";
+        grid-template-areas: ". content .";
     }
     
     #dividertop {
-        grid-area: dividertop;
+        grid-area: content;
         hr {
             border-color: 2px solid $black;
         }
@@ -30,9 +26,9 @@
     }
 
     #dividerbot {
-        grid-area: dividerbot;
+        grid-area: content;
         hr {
-            border-color: 2px solid $black;
+            border: 2px solid $black;
         }
     }
 }
