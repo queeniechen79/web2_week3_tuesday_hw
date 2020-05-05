@@ -19,6 +19,8 @@
 
     img {
         width: 100%;
+        margin-top: 10%;
+        margin-bottom: 10%;
     }
     
     #section2-container {
@@ -28,6 +30,11 @@
 
         @include md {
             grid-template-columns: 10% auto 10%;
+        }
+
+        @include lg {
+            margin-top: 35%;
+            margin-bottom: 35%;
         }
 
         #dividertop {

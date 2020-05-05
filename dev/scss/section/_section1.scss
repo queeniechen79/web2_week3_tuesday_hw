@@ -5,9 +5,33 @@
     img {
         width: 100%;
     }
-    h1 {
-        color: $orange;
-        grid-area: section1;
-        text-align: center;
+
+    >div {
+        display: grid;
+        background-image: url('../img/allcitrus.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 381px;
+
+        @include sm {
+            height: 381px;
+            background-position: center;
+        }
+        
+        @include md {
+            height: 512px;
+        }
+
+        @include lg {
+            height: 685px;
+        }
+
+        h1 {
+            color: $white;
+            padding-left: 20%;
+            padding-top: 10%;
+        }
     }
+
 }

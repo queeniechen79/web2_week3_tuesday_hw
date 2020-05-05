@@ -379,10 +379,27 @@ textarea {
 #section1 img {
   width: 100%; }
 
-#section1 h1 {
-  color: #D87337;
-  grid-area: section1;
-  text-align: center; }
+#section1 > div {
+  display: grid;
+  background-image: url("../img/allcitrus.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 381px; }
+  @media (min-width: 576px) {
+    #section1 > div {
+      height: 381px;
+      background-position: center; } }
+  @media (min-width: 768px) {
+    #section1 > div {
+      height: 512px; } }
+  @media (min-width: 992px) {
+    #section1 > div {
+      height: 685px; } }
+  #section1 > div h1 {
+    color: #fff;
+    padding-left: 20%;
+    padding-top: 10%; }
 
 /* =============
     section2
@@ -403,7 +420,9 @@ textarea {
     grid-area: section2; } }
 
 #section2 img {
-  width: 100%; }
+  width: 100%;
+  margin-top: 10%;
+  margin-bottom: 10%; }
 
 #section2 #section2-container {
   display: grid;
@@ -412,6 +431,10 @@ textarea {
   @media (min-width: 768px) {
     #section2 #section2-container {
       grid-template-columns: 10% auto 10%; } }
+  @media (min-width: 992px) {
+    #section2 #section2-container {
+      margin-top: 35%;
+      margin-bottom: 35%; } }
   #section2 #section2-container #dividertop {
     grid-area: content; }
     #section2 #section2-container #dividertop hr {
@@ -427,28 +450,29 @@ textarea {
 /* =============
     Section3
 ============= */
-#section3 img {
-  width: 100%; }
-
-#section3 #section3-container {
-  display: grid;
-  grid-template-columns: 10px auto 10px;
-  grid-template-areas: ". content ."; }
-
-#section3 #dividertop {
-  grid-area: content; }
-  #section3 #dividertop hr {
-    border-color: 2px solid #000; }
-
-#section3 #section3-content {
-  grid-area: content;
-  color: #D87337;
-  text-align: center; }
-
-#section3 #dividerbot {
-  grid-area: content; }
-  #section3 #dividerbot hr {
-    border: 2px solid #000; }
+#section3 {
+  margin-top: 5%;
+  margin-bottom: 5%; }
+  #section3 img {
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 5%; }
+  #section3 #section3-container {
+    display: grid;
+    grid-template-columns: 10px auto 10px;
+    grid-template-areas: ". content ."; }
+  #section3 #dividertop {
+    grid-area: content; }
+    #section3 #dividertop hr {
+      border-color: 2px solid #000; }
+  #section3 #section3-content {
+    grid-area: content;
+    color: #D87337;
+    text-align: center; }
+  #section3 #dividerbot {
+    grid-area: content; }
+    #section3 #dividerbot hr {
+      border: 2px solid #000; }
 
 /* =============
     Section4
@@ -461,40 +485,77 @@ textarea {
     width: 100%; }
   #section4 #gallery {
     grid-area: section4;
+    gap: 20px;
     grid-row-gap: 10px;
     grid-column-gap: 10px; }
     @media (min-width: 768px) {
       #section4 #gallery {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: " .oranges ." ". lemons ." ". limes ."; } }
+        grid-template-columns: 60% auto;
+        grid-template-areas: "oranges oranges" "lemons limes"; } }
+    @media (min-width: 992px) {
+      #section4 #gallery {
+        display: grid;
+        grid-template-columns: 60% auto;
+        grid-template-areas: "oranges lemons" "oranges limes"; } }
     @media (min-width: 768px) {
       #section4 #gallery #oranges {
-        grid-template-areas: oranges; } }
+        grid-area: oranges; } }
+    @media (min-width: 992px) {
+      #section4 #gallery #oranges {
+        grid-area: oranges; } }
     @media (min-width: 768px) {
       #section4 #gallery #lemons {
-        grid-template-areas: lemons; } }
+        grid-area: lemons; } }
+    @media (min-width: 992px) {
+      #section4 #gallery #lemons {
+        grid-area: lemons; } }
     @media (min-width: 768px) {
       #section4 #gallery #lime {
-        grid-template-areas: limes; } }
+        grid-area: limes; } }
+    @media (min-width: 992px) {
+      #section4 #gallery #lime {
+        grid-area: limes; } }
 /* =============
     section5
 ============= */
 #section5 img {
   width: 100%; }
-
-@media (min-width: 576px) {
-  #section5 {
-    display: grid;
-    grid-template-columns: auto 40%; } }
-
-@media (min-width: 992px) {
-  #section5 {
-    display: grid;
-    grid-template-columns: auto 40%; } }
-
-@media (min-width: 1200px) {
-  #section5 {
-    display: grid;
-    grid-template-columns: auto 40%;
-    padding-right: 40%; } }
+  @media (min-width: 576px) {
+    #section5 img {
+      height: 300px;
+      width: 300px; } }
+  @media (min-width: 768px) {
+    #section5 img {
+      height: 300px;
+      width: 300px;
+      padding-left: 35%;
+      padding-right: 35%; } }
+#section5 > div {
+  display: grid;
+  margin: 10px; }
+  @media (min-width: 576px) {
+    #section5 > div {
+      text-align: center;
+      text-align: justify; } }
+  @media (min-width: 768px) {
+    #section5 > div {
+      display: grid;
+      text-align: center;
+      text-align: justify; } }
+  @media (min-width: 992px) {
+    #section5 > div {
+      display: grid;
+      grid-template-columns: auto 60%; } }
+  @media (min-width: 1200px) {
+    #section5 > div {
+      display: grid;
+      grid-template-columns: auto 60%;
+      padding-right: 10%; } }
+  @media (min-width: 768px) {
+    #section5 > div p {
+      padding-left: 15%;
+      padding-right: 15%; } }
+  @media (min-width: 992px) {
+    #section5 > div p {
+      margin: 10%; } }

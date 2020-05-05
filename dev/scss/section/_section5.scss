@@ -2,32 +2,67 @@
     section5
 ============= */
 #section5 {
+    
     img {
         width: 100%;
+
+        @include sm {
+            height: 300px;
+            width: 300px;
+        }
+
+        @include md {
+            height: 300px;
+            width: 300px;
+            padding-left: 35%;
+            padding-right: 35%;
+        }
     }
-    
-    @include sm {
+
+    >div {
         display: grid;
-        grid-template-columns: auto 40%;
+        margin: 10px;
+        
+        @include sm {
+            text-align: center;
+            text-align: justify;
+        }
+
+        @include md {
+            display: grid;
+            text-align: center;
+            text-align: justify;
+        }
+
+        @include lg {
+            display: grid;
+            grid-template-columns: auto 60%;
+        }
+
+        @include xl {
+            display: grid;
+            grid-template-columns: auto 60%;
+            padding-right: 10%;
+        }
+
+        p {
+            @include md {
+                padding-left: 15%;
+                padding-right: 15%;
+            }
+
+            @include lg {
+                margin: 10%;
+            }
+        }
+
+        // display: grid;
+        // grid-template-columns: 10px auto 10px;
+        // grid-template-areas: ". content .";
+
+        //     // p {
+        //     //     grid-area: content;
+        //     //     text-align: center;
+        //     // }
     }
-
-    @include lg {
-        display: grid;
-        grid-template-columns: auto 40%;
-    }
-
-    @include xl {
-        display: grid;
-        grid-template-columns: auto 40%;
-        padding-right: 40%;
-    }
-
-    // display: grid;
-    // grid-template-columns: 10px auto 10px;
-    // grid-template-areas: ". content .";
-
-        // p {
-        //     grid-area: content;
-        //     text-align: center;
-        // }
 }

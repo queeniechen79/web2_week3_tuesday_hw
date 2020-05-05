@@ -12,30 +12,50 @@
 
     #gallery {
         grid-area: section4;
+        gap: 20px;
         grid-row-gap: 10px;
         grid-column-gap: 10px;
 
         @include md {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-areas: " .oranges ." ". lemons ." ". limes .";
+            grid-template-columns: 60% auto;
+            grid-template-areas: "oranges oranges" "lemons limes";
         }
+
+        @include lg {
+            display: grid;
+            grid-template-columns: 60% auto;
+            grid-template-areas: "oranges lemons" "oranges limes";
+        }
+
 
         #oranges {
             @include md {
-                grid-template-areas: oranges;
+                grid-area: oranges;
+            }
+
+            @include lg {
+                grid-area: oranges;
             }
         }
 
         #lemons {
             @include md {
-                grid-template-areas: lemons;
+                grid-area: lemons;
+            }
+
+            @include lg {
+                grid-area: lemons;
             }
         }
 
         #lime {
             @include md {
-                grid-template-areas: limes;
+                grid-area: limes;
+            }
+
+            @include lg {
+                grid-area: limes;
             }
         }
     }
