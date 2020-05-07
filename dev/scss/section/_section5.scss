@@ -18,7 +18,6 @@
             // padding-left: 35%;
             // padding-right: 35%;
         }
-    
     }
 
     >div {
@@ -27,18 +26,21 @@
         margin-right: 10px;
         
         @include sm {
-            text-align: center justify;
             margin-left: 105px;
             margin-right: 105px;
         }
 
         @include md {
             display: grid;
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
 
         @include lg {
             display: grid;
             grid-template-columns: auto 60%;
+            margin-left: 0px;
+            margin-right: 0px;
         }
 
         #circle {
@@ -50,8 +52,6 @@
             text-align: justify;
             
             @include md {
-                text-align: center justify;
-                display: grid;
                 margin-left: 105px;
                 margin-right: 105px;
             }

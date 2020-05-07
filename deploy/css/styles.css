@@ -548,16 +548,19 @@ textarea {
   margin-right: 10px; }
   @media (min-width: 576px) {
     #section5 > div {
-      text-align: center justify;
       margin-left: 105px;
       margin-right: 105px; } }
   @media (min-width: 768px) {
     #section5 > div {
-      display: grid; } }
+      display: grid;
+      margin-top: 20px;
+      margin-bottom: 20px; } }
   @media (min-width: 992px) {
     #section5 > div {
       display: grid;
-      grid-template-columns: auto 60%; } }
+      grid-template-columns: auto 60%;
+      margin-left: 0px;
+      margin-right: 0px; } }
   #section5 > div #circle {
     text-align: center;
     margin-bottom: 10px; }
@@ -565,8 +568,6 @@ textarea {
     text-align: justify; }
     @media (min-width: 768px) {
       #section5 > div #paragraph {
-        text-align: center justify;
-        display: grid;
         margin-left: 105px;
         margin-right: 105px; } }
     @media (min-width: 992px) {
