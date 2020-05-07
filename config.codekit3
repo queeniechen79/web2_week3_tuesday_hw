@@ -92,7 +92,7 @@
 		"oAP": "/deploy/img/oranges.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/deploy/img/smallgroupofcitrus.jpg": {

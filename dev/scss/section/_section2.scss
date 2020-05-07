@@ -8,9 +8,17 @@
         grid-template-areas: " .section2 .";
     }
     
+    @include md {
+        display: grid;
+        grid-template-columns: 40% auto;
+        grid-area: section2;
+    }
+
     @include lg {
         display: grid;
         grid-template-columns: 40% auto;
+        grid-area: section2;
+        margin-left: 10px;
     }
 
     @include xl {
@@ -19,8 +27,8 @@
 
     img {
         width: 100%;
-        margin-top: 10%;
-        margin-bottom: 10%;
+        margin-top: 50px;
+        margin-bottom: 50px;
     }
     
     #section2-container {
@@ -30,6 +38,8 @@
 
         @include md {
             grid-template-columns: 10% auto 10%;
+            margin-top: 35%;
+            margin-bottom: 35%;
         }
 
         @include lg {

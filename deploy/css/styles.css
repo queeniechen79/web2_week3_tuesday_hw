@@ -376,9 +376,6 @@ textarea {
 /* =============
     section1
 ============= */
-#section1 img {
-  width: 100%; }
-
 #section1 > div {
   display: grid;
   background-image: url("../img/allcitrus.jpg");
@@ -410,10 +407,18 @@ textarea {
     grid-template-columns: auto 1200px auto;
     grid-template-areas: " .section2 ."; } }
 
+@media (min-width: 768px) {
+  #section2 {
+    display: grid;
+    grid-template-columns: 40% auto;
+    grid-area: section2; } }
+
 @media (min-width: 992px) {
   #section2 {
     display: grid;
-    grid-template-columns: 40% auto; } }
+    grid-template-columns: 40% auto;
+    grid-area: section2;
+    margin-left: 10px; } }
 
 @media (min-width: 1200px) {
   #section2 {
@@ -421,8 +426,8 @@ textarea {
 
 #section2 img {
   width: 100%;
-  margin-top: 10%;
-  margin-bottom: 10%; }
+  margin-top: 50px;
+  margin-bottom: 50px; }
 
 #section2 #section2-container {
   display: grid;
@@ -430,7 +435,9 @@ textarea {
   grid-template-areas: ". content ."; }
   @media (min-width: 768px) {
     #section2 #section2-container {
-      grid-template-columns: 10% auto 10%; } }
+      grid-template-columns: 10% auto 10%;
+      margin-top: 35%;
+      margin-bottom: 35%; } }
   @media (min-width: 992px) {
     #section2 #section2-container {
       margin-top: 35%;
@@ -451,12 +458,11 @@ textarea {
     Section3
 ============= */
 #section3 {
-  margin-top: 5%;
-  margin-bottom: 5%; }
+  margin-top: 50px;
+  margin-bottom: 50px; }
   #section3 img {
     width: 100%;
-    margin-top: 5%;
-    margin-bottom: 5%; }
+    margin-bottom: 50px; }
   #section3 #section3-container {
     display: grid;
     grid-template-columns: 10px auto 10px;
@@ -479,43 +485,50 @@ textarea {
 ============= */
 #section4 {
   display: grid;
-  grid-template-columns: 10px auto 10px;
-  grid-template-areas: ". section4 ."; }
-  #section4 img {
-    width: 100%; }
+  margin-left: 10px;
+  margin-right: 10px; }
+  @media (min-width: 1200px) {
+    #section4 {
+      display: grid;
+      grid-template-columns: auto 1200px auto;
+      grid-template-areas: ". section4 ."; } }
   #section4 #gallery {
-    grid-area: section4;
-    gap: 20px;
-    grid-row-gap: 10px;
-    grid-column-gap: 10px; }
+    display: grid;
+    grid-gap: 20px;
+    grid-template-rows: repeat(2, 500px); }
+    @media (min-width: 576px) {
+      #section4 #gallery {
+        grid-template-areas: "oranges" "lemons" "limes"; } }
     @media (min-width: 768px) {
       #section4 #gallery {
-        display: grid;
-        grid-template-columns: 60% auto;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 340px);
         grid-template-areas: "oranges oranges" "lemons limes"; } }
     @media (min-width: 992px) {
       #section4 #gallery {
-        display: grid;
-        grid-template-columns: 60% auto;
         grid-template-areas: "oranges lemons" "oranges limes"; } }
-    @media (min-width: 768px) {
-      #section4 #gallery #oranges {
-        grid-area: oranges; } }
-    @media (min-width: 992px) {
-      #section4 #gallery #oranges {
-        grid-area: oranges; } }
-    @media (min-width: 768px) {
-      #section4 #gallery #lemons {
-        grid-area: lemons; } }
-    @media (min-width: 992px) {
-      #section4 #gallery #lemons {
-        grid-area: lemons; } }
-    @media (min-width: 768px) {
-      #section4 #gallery #lime {
-        grid-area: limes; } }
-    @media (min-width: 992px) {
-      #section4 #gallery #lime {
-        grid-area: limes; } }
+    @media (min-width: 1200px) {
+      #section4 #gallery {
+        grid-area: section4; } }
+    #section4 #gallery li {
+      background-position: center;
+      background-size: cover; }
+    #section4 #gallery #oranges {
+      background-image: url("../img/oranges.jpg"); }
+      @media (min-width: 768px) {
+        #section4 #gallery #oranges {
+          grid-area: oranges;
+          background-position: center top; } }
+    #section4 #gallery #lemons {
+      background-image: url("../img/lemons.jpg"); }
+      @media (min-width: 768px) {
+        #section4 #gallery #lemons {
+          grid-area: lemons; } }
+    #section4 #gallery #lime {
+      background-image: url("../img/lime.jpg"); }
+      @media (min-width: 768px) {
+        #section4 #gallery #lime {
+          grid-area: limes; } }
 /* =============
     section5
 ============= */
@@ -528,34 +541,35 @@ textarea {
   @media (min-width: 768px) {
     #section5 img {
       height: 300px;
-      width: 300px;
-      padding-left: 35%;
-      padding-right: 35%; } }
+      width: 300px; } }
 #section5 > div {
   display: grid;
-  margin: 10px; }
+  margin-left: 10px;
+  margin-right: 10px; }
   @media (min-width: 576px) {
     #section5 > div {
-      text-align: center;
-      text-align: justify; } }
+      text-align: center justify;
+      margin-left: 105px;
+      margin-right: 105px; } }
   @media (min-width: 768px) {
     #section5 > div {
-      display: grid;
-      text-align: center;
-      text-align: justify; } }
+      display: grid; } }
   @media (min-width: 992px) {
     #section5 > div {
       display: grid;
       grid-template-columns: auto 60%; } }
-  @media (min-width: 1200px) {
-    #section5 > div {
-      display: grid;
-      grid-template-columns: auto 60%;
-      padding-right: 10%; } }
-  @media (min-width: 768px) {
-    #section5 > div p {
-      padding-left: 15%;
-      padding-right: 15%; } }
-  @media (min-width: 992px) {
-    #section5 > div p {
-      margin: 10%; } }
+  #section5 > div #circle {
+    text-align: center;
+    margin-bottom: 10px; }
+  #section5 > div #paragraph {
+    text-align: justify; }
+    @media (min-width: 768px) {
+      #section5 > div #paragraph {
+        text-align: center justify;
+        display: grid;
+        margin-left: 105px;
+        margin-right: 105px; } }
+    @media (min-width: 992px) {
+      #section5 > div #paragraph {
+        margin-top: 100px;
+        margin-left: 20px; } }

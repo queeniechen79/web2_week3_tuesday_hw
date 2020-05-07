@@ -2,7 +2,8 @@
     section5
 ============= */
 #section5 {
-    
+    // padding: 41px 0 36px;
+
     img {
         width: 100%;
 
@@ -14,24 +15,25 @@
         @include md {
             height: 300px;
             width: 300px;
-            padding-left: 35%;
-            padding-right: 35%;
+            // padding-left: 35%;
+            // padding-right: 35%;
         }
+    
     }
 
     >div {
         display: grid;
-        margin: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
         
         @include sm {
-            text-align: center;
-            text-align: justify;
+            text-align: center justify;
+            margin-left: 105px;
+            margin-right: 105px;
         }
 
         @include md {
             display: grid;
-            text-align: center;
-            text-align: justify;
         }
 
         @include lg {
@@ -39,30 +41,26 @@
             grid-template-columns: auto 60%;
         }
 
-        @include xl {
-            display: grid;
-            grid-template-columns: auto 60%;
-            padding-right: 10%;
+        #circle {
+            text-align: center;
+            margin-bottom: 10px;
         }
 
-        p {
+        #paragraph {
+            text-align: justify;
+            
             @include md {
-                padding-left: 15%;
-                padding-right: 15%;
+                text-align: center justify;
+                display: grid;
+                margin-left: 105px;
+                margin-right: 105px;
             }
 
             @include lg {
-                margin: 10%;
+                margin-top: 100px;
+                margin-left: 20px;
             }
+
         }
-
-        // display: grid;
-        // grid-template-columns: 10px auto 10px;
-        // grid-template-areas: ". content .";
-
-        //     // p {
-        //     //     grid-area: content;
-        //     //     text-align: center;
-        //     // }
     }
 }

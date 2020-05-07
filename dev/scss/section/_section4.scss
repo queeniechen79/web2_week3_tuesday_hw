@@ -2,63 +2,68 @@
     Section4
 ============= */
 #section4 {
-    img {
-        width: 100%;
-    }
-    
     display: grid;
-    grid-template-columns: 10px auto 10px;
-    grid-template-areas: ". section4 .";
+    margin-left: 10px;
+    margin-right: 10px;
+    
+    @include xl {
+        display: grid;
+        grid-template-columns: auto 1200px auto;
+        grid-template-areas: ". section4 .";
+    }
 
     #gallery {
-        grid-area: section4;
-        gap: 20px;
-        grid-row-gap: 10px;
-        grid-column-gap: 10px;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-rows: repeat(2, 500px);
 
+        @include sm {
+            grid-template-areas: "oranges" "lemons" "limes";
+        }
+        
         @include md {
-            display: grid;
-            grid-template-columns: 60% auto;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 340px);
             grid-template-areas: "oranges oranges" "lemons limes";
         }
 
         @include lg {
-            display: grid;
-            grid-template-columns: 60% auto;
             grid-template-areas: "oranges lemons" "oranges limes";
         }
 
+        @include xl {
+            grid-area: section4;
+        }
+
+        li {
+            background-position: center;
+            background-size: cover;
+        }
 
         #oranges {
+            background-image: url('../img/oranges.jpg');
+
             @include md {
                 grid-area: oranges;
-            }
-
-            @include lg {
-                grid-area: oranges;
+                background-position: center top;
             }
         }
 
         #lemons {
+            background-image: url('../img/lemons.jpg');
+    
             @include md {
-                grid-area: lemons;
-            }
-
-            @include lg {
                 grid-area: lemons;
             }
         }
 
         #lime {
-            @include md {
-                grid-area: limes;
-            }
+            background-image: url('../img/lime.jpg');
 
-            @include lg {
+            @include md {
                 grid-area: limes;
             }
         }
     }
-    
 }
 
