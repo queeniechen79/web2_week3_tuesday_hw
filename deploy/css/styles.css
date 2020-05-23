@@ -338,6 +338,16 @@ ul li {
 /* =============
     Typography
 ============= */
+#section1, #section2, #section3, #section4, #section5, footer {
+  font-family: 'Montserrat', sans-serif; }
+
+#section1 h1 {
+  font-family: 'Lobster', sans-serif;
+  font-size: 2.75rem; }
+
+#section2 h1 {
+  font-family: 'Montserrat', sans-serif; }
+
 /* =============
     Buttons
 ============= */
