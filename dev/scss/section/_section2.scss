@@ -42,11 +42,6 @@
             margin-bottom: 35%;
         }
 
-        @include lg {
-            margin-top: 35%;
-            margin-bottom: 35%;
-        }
-
         #dividertop {
             grid-area: content;
             hr {

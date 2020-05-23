@@ -28,6 +28,49 @@
             padding-left: 20%;
             padding-top: 10%;
         }
+
     }
 
+    #nav {
+        display: grid;
+        grid-template-areas: "burger" "logo nav";
+        background-color: $orange;
+
+        section,
+        nav {
+            padding: 20px;
+        }
+
+        h2 {
+            color:$white;
+            text-align: left;
+            grid-area: logo;
+        }
+
+        #burger-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            grid-area: burger;
+
+            @include lg {
+                display: none;
+            }
+
+            i {
+                cursor: pointer;
+            }
+        }
+
+        #nav-container {
+            background-color: $orange;
+            grid-area: nav;
+            display: none;
+            padding: 20px;
+
+            @include lg {
+                display: block !important;
+            }
+        }
+    }
 }

@@ -359,6 +359,28 @@ textarea {
 /* =============
     Navigation
 ============= */
+#nav-container ul {
+  height: 100%;
+  text-align: right; }
+  @media (min-width: 992px) {
+    #nav-container ul {
+      display: flex;
+      justify-content: flex-end; } }
+  #nav-container ul li {
+    margin-bottom: 20px; }
+    @media (min-width: 992px) {
+      #nav-container ul li {
+        margin: 0 30px 0 0;
+        align-items: center;
+        display: flex; } }
+    #nav-container ul li a:link,
+    #nav-container ul li a:visited {
+      color: #fff;
+      text-decoration: none; }
+    #nav-container ul li a:hover,
+    #nav-container ul li a:active {
+      color: #000; }
+
 /* =============
     Footer
 ============= */
@@ -398,6 +420,35 @@ textarea {
     padding-left: 20%;
     padding-top: 10%; }
 
+#section1 #nav {
+  display: grid;
+  grid-template-areas: "burger" "logo nav";
+  background-color: #D87337; }
+  #section1 #nav section,
+  #section1 #nav nav {
+    padding: 20px; }
+  #section1 #nav h2 {
+    color: #fff;
+    text-align: left;
+    grid-area: logo; }
+  #section1 #nav #burger-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    grid-area: burger; }
+    @media (min-width: 992px) {
+      #section1 #nav #burger-container {
+        display: none; } }
+    #section1 #nav #burger-container i {
+      cursor: pointer; }
+  #section1 #nav #nav-container {
+    background-color: #D87337;
+    grid-area: nav;
+    display: none;
+    padding: 20px; }
+    @media (min-width: 992px) {
+      #section1 #nav #nav-container {
+        display: block !important; } }
 /* =============
     section2
 ============= */
@@ -438,10 +489,6 @@ textarea {
       grid-template-columns: 10% auto 10%;
       margin-top: 35%;
       margin-bottom: 35%; } }
-  @media (min-width: 992px) {
-    #section2 #section2-container {
-      margin-top: 35%;
-      margin-bottom: 35%; } }
   #section2 #section2-container #dividertop {
     grid-area: content; }
     #section2 #section2-container #dividertop hr {
@@ -470,7 +517,7 @@ textarea {
   #section3 #dividertop {
     grid-area: content; }
     #section3 #dividertop hr {
-      border-color: 2px solid #000; }
+      border: 2px solid #000; }
   #section3 #section3-content {
     grid-area: content;
     color: #D87337;
